@@ -1,0 +1,48 @@
+{
+  "$schema": "https://agentsmp.com/schemas/family/v1.json",
+  "schemaVersion": 1,
+  "name": "Navam9530_broken-config-demo",
+  "description": "family.json has duplicate agent ids.",
+  "version": "0.1.0",
+  "agents": {
+    "id": "lead",
+    "name": "lead",
+    "description": "Has two sub-agents with the same id.",
+    "model": {
+      "provider": "anthropic",
+      "name": "claude-sonnet-5-5"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "mcps": [],
+    "skills": [],
+    "sub-agents": [
+      {
+        "id": "helper",
+        "name": "helper",
+        "description": "First helper.",
+        "position": {
+          "x": 320,
+          "y": 0
+        },
+        "mcps": [],
+        "skills": [],
+        "sub-agents": []
+      },
+      {
+        "id": "helper",
+        "name": "helper",
+        "description": "Second helper.",
+        "position": {
+          "x": 320,
+          "y": 120
+        },
+        "mcps": [],
+        "skills": [],
+        "sub-agents": []
+      }
+    ]
+  }
+}
